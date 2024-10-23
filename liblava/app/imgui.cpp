@@ -200,6 +200,7 @@ void imgui::setup(GLFWwindow* w, config config) {
                                        to_i32(config.font_data.size),
                                        config.font_size,
                                        &font_config);
+        config.font_data.deallocate();
     } else {
         io.Fonts->AddFontDefault();
     }
@@ -219,6 +220,8 @@ void imgui::setup(GLFWwindow* w, config config) {
                                        config.icon.size,
                                        &icon_config,
                                        m_icons_range.data());
+
+        config.icon.font_data.deallocate();
     }
 
     io.SetClipboardTextFn = set_clipboard_text;
