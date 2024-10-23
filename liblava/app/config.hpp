@@ -52,7 +52,7 @@ struct app_config : configurable {
     imgui::font imgui_font;
 
     /// Identification
-    string id = _default_;
+    string name = _default_;
 
     /// @see configurable::set_json
     void set_json(json_ref j) override;

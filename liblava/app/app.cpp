@@ -66,21 +66,21 @@ void app::parse_cmd_line() {
 }
 
 //-----------------------------------------------------------------------------
-bool app::load_config(string_ref config_id) {
-    config.id = config_id;
+bool app::load_config(string_ref config_name) {
+    config.name = config_name;
 
     config.context = this;
 
     m_config_callback.on_load = [&](json_ref j) {
-        if (!j.count(config.id))
+        if (!j.count(config.name))
             return;
 
-        config.set_json(j[config.id]);
+        config.set_json(j[config.name]);
     };
 
     m_config_callback.on_save = [&]() {
         json j;
-        j[config.id] = config.get_json();
+        j[config.name] = config.get_json();
         return j;
     };
 
@@ -177,13 +177,13 @@ bool app::setup() {
     if (!setup_file_system())
         return false;
 
-    auto const config_id = get_cmd(get_cmd_line(),
-                                   {"-id", "--identification"});
-    if (!config_id.empty()) {
-        if (!load_config(config_id))
-            logger()->debug("new config id (cmd line): {}", config_id);
-    } else if (!load_config(config.id))
-        logger()->debug("new config id: {}", config.id);
+    auto const config_name = get_cmd(get_cmd_line(),
+                                     {"-id", "--identification"});
+    if (!config_name.empty()) {
+        if (!load_config(config_name))
+            logger()->debug("new config name (cmd line): {}", config_name);
+    } else if (!load_config(config.name))
+        logger()->debug("new config name: {}", config.name);
 
     parse_cmd_line();
 
@@ -272,8 +272,8 @@ bool app::setup_window() {
     if (get_cmd_line()[{"-wt", "--title"}])
         window.show_save_title();
 
-    if (config.id != _default_)
-        window.set_save_name(config.id);
+    if (config.name != _default_)
+        window.set_save_name(config.name);
 
     if (!window.create(config.window_state))
         return false;
@@ -712,18 +712,18 @@ string app::screenshot() {
 }
 
 //-----------------------------------------------------------------------------
-void app::switch_config(string_ref id) {
-    if (id == config.id)
+void app::switch_config(string_ref config_name) {
+    if (config_name == config.name)
         return;
 
-    if (!load_config(id))
-        logger()->debug("new config id (switch): {}", id);
+    if (!load_config(config_name))
+        logger()->debug("new config id (switch): {}", config_name);
 
     if (headless)
         return;
 
     window.set_state(config.window_state.value());
-    window.set_save_name(id);
+    window.set_save_name(config_name);
 
     window.update_title();
 }

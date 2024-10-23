@@ -209,10 +209,10 @@ struct app : frame {
     string screenshot();
 
     /**
-     * Switch config id
-     * @param id    Config id
+     * Switch config name
+     * @param config_name    Config name
      */
-    void switch_config(string_ref id);
+    void switch_config(string_ref config_name);
 
 private:
     /**
@@ -256,10 +256,10 @@ private:
 
     /**
      * @brief Load configuration file
-     * @param config_id    Config id
+     * @param config_name    Config name
      * @return Load was successful or failed
      */
-    bool load_config(string_ref config_id);
+    bool load_config(string_ref config_name);
 
     /**
      * @brief Handle inputs
