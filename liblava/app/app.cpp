@@ -67,20 +67,20 @@ void app::parse_cmd_line() {
 
 //-----------------------------------------------------------------------------
 bool app::load_config(string_ref config_name) {
-    config.name = config_name;
+    config.name_id = config_name;
 
     config.context = this;
 
     m_config_callback.on_load = [&](json_ref j) {
-        if (!j.count(config.name))
+        if (!j.count(config.name_id))
             return;
 
-        config.set_json(j[config.name]);
+        config.set_json(j[config.name_id]);
     };
 
     m_config_callback.on_save = [&]() {
         json j;
-        j[config.name] = config.get_json();
+        j[config.name_id] = config.get_json();
         return j;
     };
 
@@ -181,9 +181,9 @@ bool app::setup() {
                                      {"-id", "--identification"});
     if (!config_name.empty()) {
         if (!load_config(config_name))
-            logger()->debug("new config name (cmd line): {}", config_name);
-    } else if (!load_config(config.name))
-        logger()->debug("new config name: {}", config.name);
+            logger()->debug("new config name id (cmd line): {}", config_name);
+    } else if (!load_config(config.name_id))
+        logger()->debug("new config name id: {}", config.name_id);
 
     parse_cmd_line();
 
@@ -272,8 +272,8 @@ bool app::setup_window() {
     if (get_cmd_line()[{"-wt", "--title"}])
         window.show_save_title();
 
-    if (config.name != _default_)
-        window.set_save_name(config.name);
+    if (config.name_id != _default_)
+        window.set_save_name(config.name_id);
 
     if (!window.create(config.window_state))
         return false;
@@ -713,7 +713,7 @@ string app::screenshot() {
 
 //-----------------------------------------------------------------------------
 void app::switch_config(string_ref config_name) {
-    if (config_name == config.name)
+    if (config_name == config.name_id)
         return;
 
     if (!load_config(config_name))

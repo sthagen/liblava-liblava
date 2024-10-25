@@ -51,10 +51,10 @@ bool engine::setup() {
 //-----------------------------------------------------------------------------
 void engine::handle_config() {
     m_config_callback.on_load = [&](json_ref j) {
-        if (!j.count(config.name))
+        if (!j.count(config.name_id))
             return;
 
-        auto j_config = j[config.name];
+        auto j_config = j[config.name_id];
         if (!j_config.count(_props_))
             return;
 
@@ -63,7 +63,7 @@ void engine::handle_config() {
 
     m_config_callback.on_save = [&]() {
         json j;
-        j[config.name][_props_] = props.get_json();
+        j[config.name_id][_props_] = props.get_json();
         return j;
     };
 
