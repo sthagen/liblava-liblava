@@ -27,31 +27,31 @@ set(tinyobjloader_GITHUB syoyo/tinyobjloader)
 set(tinyobjloader_TAG b5346fac929c8a862a1c1d4d89db5477d30b7e6f)
 
 set(Vulkan-Headers_GITHUB KhronosGroup/Vulkan-Headers)
-set(Vulkan-Headers_TAG ab1ea9059d75b42a5717c7ab55713bdf194ccf21)
+set(Vulkan-Headers_TAG f2eb740f3f0340ad941e563484d5ba45a5ec6af0)
 
 set(volk_GITHUB zeux/volk)
-set(volk_TAG 086957f3b39ac0a37fb7f344a523bef9b194ba8f)
+set(volk_TAG bb523d7d109cd3147e0f91d180699d7cc23e23c4)
 
 set(VulkanMemoryAllocator_GITHUB GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator)
-set(VulkanMemoryAllocator_TAG 1c35ba99ce775f8342d87a83a3f0f696f99c2a39)
+set(VulkanMemoryAllocator_TAG 05973d8aeb1a4d12f59aadfb86d20decadba82d1)
 
 set(IconFontCppHeaders_GITHUB juliettef/IconFontCppHeaders)
-set(IconFontCppHeaders_TAG bf610efb2e5d4361df799d0dfb5ae3977d7bba2e)
+set(IconFontCppHeaders_TAG f71e71c7045e86947d4a2669d01bbc2adefd7135)
 
 set(imgui_GITHUB ocornut/imgui)
-set(imgui_TAG ccb6646baeac88d276078ebade5616f4c6d7c03a)
+set(imgui_TAG 71c77c081ac36841e682498229088e7678207112)
 
 set(imgui_docking_GITHUB ocornut/imgui)
-set(imgui_docking_TAG 646df390032f64eb03f8b5e2e5cbaf0c8e3bb237)
+set(imgui_docking_TAG ee1deccc08c14ab1e6abcfa6aae11d915763cdb7)
 
 set(SPIRV-Headers_GITHUB KhronosGroup/SPIRV-Headers)
-set(SPIRV-Headers_TAG 22c4d1b1e9d1c7d9aa5086c93e6491f21080019b)
+set(SPIRV-Headers_TAG cb6b2c32dbfc3257c1e9142a116fe9ee3d9b80a2)
 
 set(SPIRV-Tools_GITHUB KhronosGroup/SPIRV-Tools)
-set(SPIRV-Tools_TAG ce92630396c2fd2d6d04819369116af4fb141a28)
+set(SPIRV-Tools_TAG e5c1498afa1daa8cf3a48af7a74e3b7429afb05d)
 
 set(glslang_GITHUB KhronosGroup/glslang)
-set(glslang_TAG 2fed4fc07c9190df5369db787a679096c55474e5)
+set(glslang_TAG d81aeef9f82050bd5940ce1c475d8316ad41d747)
 
 set(shaderc_GITHUB google/shaderc)
 set(shaderc_TAG ddac450a36a3be28a2c2173f26703249dd83cfdf)
@@ -60,4 +60,4 @@ set(PicoSHA2_GITHUB okdshin/PicoSHA2)
 set(PicoSHA2_TAG 27fcf6979298949e8a462e16d09a0351c18fcaf2)
 
 set(Catch2_GITHUB catchorg/Catch2)
-set(Catch2_TAG a6ee7e20cd4011129816df7992c1a9db2ef4b58f)
+set(Catch2_TAG 119a7bbe53ae8959f51c021c63bbd5a1734c5261)
