@@ -200,6 +200,7 @@ void imgui::setup(GLFWwindow* w, config config) {
                                        to_i32(config.font_data.size),
                                        config.font_size,
                                        &font_config);
+
         config.font_data.deallocate();
     } else {
         io.Fonts->AddFontDefault();
