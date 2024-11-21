@@ -13,7 +13,7 @@ message(STATUS "  _|  _|  _|    _|      _|      _|    _|        _|  _|        _|
 message(STATUS "  _|  _|  _|_|_|        _|        _|_|_|          _|            _|_|_|  ")
 message(STATUS "                                                                        ")
 message(STATUS "========================================================================")
-message(STATUS " https://liblava.dev        2024 preview / 0.8.1           MIT licensed ")
+message(STATUS " https://liblava.dev        2024 rolling / 0.8.1           MIT licensed ")
 
 option(LIBLAVA_TEST "Enable Test" TRUE)
 option(LIBLAVA_DEMO "Enable Demo" TRUE)

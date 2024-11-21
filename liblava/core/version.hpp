@@ -57,7 +57,8 @@ enum class version_stage : index {
     alpha,
     beta,
     rc,
-    release
+    release,
+    rolling
 };
 
 /**
@@ -71,7 +72,7 @@ struct version {
     ui32 release = 0;
 
     /// Version stage
-    version_stage stage = version_stage::preview;
+    version_stage stage = version_stage::rolling;
 
     /// Version revision
     ui32 rev = 0;
