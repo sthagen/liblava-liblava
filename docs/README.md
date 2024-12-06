@@ -12,7 +12,7 @@
 
 <br />
 
-[Guide](#guide) &nbsp; • &nbsp; [Test](#test) &nbsp; • &nbsp; [Keyboard Shortcuts](#keyboard-shortcuts) &nbsp; • &nbsp; [Command-Line Arguments](#command-line-arguments) &nbsp; • &nbsp; [Benchmark](#benchmark) &nbsp; • &nbsp; [Build](#build) &nbsp; • &nbsp; [Third-Party](#third-party)
+[Guide](#guide) &nbsp; • &nbsp; [Test](#test) &nbsp; • &nbsp; [Keyboard Shortcuts](#keyboard-shortcuts) &nbsp; • &nbsp; [Command-Line Arguments](#command-line-arguments) &nbsp; • &nbsp; [Benchmark](#benchmark) &nbsp; • &nbsp; [Build](#build) &nbsp; • &nbsp; [Install](#install) &nbsp; • &nbsp; [Third-Party](#third-party)
 
 <br />
 
@@ -978,7 +978,7 @@ sudo apt-get install libxi-dev libatomic-ops-dev libatomic1
 
 <br />
 
-## Install
+# Install
 
 You can use **liblava** as a *git submodule* in your project:
 
